@@ -6,10 +6,13 @@ run-name: PR checks for ${{ github.event.pull_request.number }}
 
 defaults:
   run:
+    shell: bash
     working-directory: ./v56-team22-surgery-status-board
 
 on:
   pull_request:
+    branches: ["main", "development"]
+  push:
     branches: ["main", "development"]
 
 jobs:
